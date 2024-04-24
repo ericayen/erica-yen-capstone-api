@@ -3,9 +3,10 @@ exports.up = function (knex) {
     table.increments("id").primary();
     table.string("coffee_type").notNullable();
     table.text("history").notNullable();
+    table.text("countries").notNullable();
+    table.string("acidity").notNullable();
     table.text("flavor").notNullable();
     table.text("roast_profile").notNullable();
-    // table.jsonb("characteristics");
     table.timestamps(true, true);
   });
 };
