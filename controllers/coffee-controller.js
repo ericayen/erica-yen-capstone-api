@@ -16,6 +16,7 @@ const getCoffeeItem = async (req, res) => {
       res.status(404).json(`Coffee item #${req.params.id} not found`);
       return;
     }
+    res.status(200).json(data);
   } catch (error) {
     res.status(400).json(`Error retrieving coffee item: ${error}`);
   }

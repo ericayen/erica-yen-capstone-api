@@ -1,6 +1,6 @@
 exports.seed = async function (knex) {
-  await knex("quiz_questions").del();
-  await knex("quiz_questions").insert([
+  await knex("questions").del();
+  await knex("questions").insert([
     {
       id: 1,
       question:
