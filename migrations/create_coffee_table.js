@@ -1,6 +1,6 @@
 exports.up = function (knex) {
   return knex.schema.createTable("coffee", function (table) {
-    table.increments("id").primary();
+    table.increments("coffee_id").primary();
     table.string("coffee_type").notNullable();
     table.text("history").notNullable();
     table.text("countries").notNullable();
