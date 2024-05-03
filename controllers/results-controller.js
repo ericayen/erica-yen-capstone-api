@@ -11,22 +11,16 @@ const filterResults = async (req, res) => {
       });
     });
 
-    console.log(coffeeCount);
-
     const maxCount = Math.max(...Object.values(coffeeCount));
     const matchedCoffeeIds = Object.keys(coffeeCount).filter(
       (id) => coffeeCount[id] === maxCount
     );
-
-    console.log("Best matched coffee ids:", matchedCoffeeIds);
 
     const coffeeInfo = [];
     for (const id of matchedCoffeeIds) {
       const response = await knex("coffee").where("coffee_id", id).first();
       coffeeInfo.push(response);
     }
-
-    console.log("Coffee Info:", coffeeInfo);
 
     res.status(200).json({ results: coffeeInfo });
   } catch (error) {
