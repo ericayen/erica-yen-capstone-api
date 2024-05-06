@@ -8,7 +8,6 @@ exports.up = function (knex) {
     table.string("acidity").notNullable();
     table.text("flavor").notNullable();
     table.text("roast_profile").notNullable();
-    table.timestamps(true, true);
   });
 };
 
