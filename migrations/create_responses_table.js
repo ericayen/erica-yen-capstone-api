@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.integer("question_id").unsigned().notNullable();
     table.foreign("question_id").references("question_id").inTable("questions");
     table.string("option").notNullable();
-    table.integer("weight").notNullable();
+    table.string("coffee_ids").notNullable();
   });
 };
 
