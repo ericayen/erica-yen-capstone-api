@@ -1,9 +1,10 @@
 exports.up = function (knex) {
   return knex.schema.createTable("comments", function (table) {
-    table.increments("comment_id").primary();
+    table.uuid("comment_id").primary();
     table.string("name").notNullable();
+    table.string("avatar");
     table.text("comment").notNullable();
-    table.string("date").notNullable();
+    table.bigInteger("date").notNullable();
   });
 };
 
