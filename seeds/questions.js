@@ -4,12 +4,12 @@ exports.seed = async function (knex) {
     {
       question_id: 1,
       question:
-        "Do you prefer bold and strong flavors, or mild and less strong flavors?",
+        "Do you prefer bold and strong flavours, or mild and less strong flavours?",
     },
     {
       question_id: 2,
       question:
-        "Which flavors do you enjoy more: nutty and chocolatey, fruity and floral, or woody and earthy?",
+        "Which flavours do you enjoy more: nutty and chocolatey, fruity and floral, or woody and earthy?",
     },
     {
       question_id: 3,

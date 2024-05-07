@@ -11,7 +11,9 @@ const getCoffeeList = async (_req, res) => {
 
 const getCoffeeItem = async (req, res) => {
   try {
-    const data = await knex("coffee").where({ id: req.params.id }).first();
+    const data = await knex("coffee")
+      .where({ coffee_id: req.params.id })
+      .first();
     if (!data) {
       res.status(404).json(`Coffee item #${req.params.id} not found`);
       return;

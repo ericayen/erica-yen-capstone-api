@@ -6,7 +6,7 @@ exports.up = function (knex) {
     table.text("history").notNullable();
     table.text("countries").notNullable();
     table.string("acidity").notNullable();
-    table.text("flavor").notNullable();
+    table.text("flavour").notNullable();
     table.text("roast_profile").notNullable();
   });
 };
